@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 class Bandit:
 
     def __init__(self, arms):
@@ -20,6 +21,7 @@ class Bandit:
     def lowest_mean(self):
         return min(self.arm_mean)
 
+
 class ActionHistory:
 
     def __init__(self):
@@ -29,6 +31,7 @@ class ActionHistory:
     def sample(self, value):
         self.count += 1
         self.mean_reward += (value - self.mean_reward)/self.count
+
 
 class Agent:
 
